@@ -35,8 +35,9 @@ function scene:create( event )
     title.x = display.contentCenterX
     title.y = display.contentCenterY-100
 
-    local playButton = display.newText( sceneGroup, "PLAY", display.contentCenterX, 500, native.systemFont, 44 )
-    playButton:setFillColor( 0.15, 0.86, 1 )
+    local playButton = display.newImageRect( sceneGroup, "play_btn.png", 90*2, 30*2 )
+	playButton.x = display.contentCenterX
+	playButton.y = display.contentHeight-50
 
     playButton:addEventListener( "tap", gotoGame )
 
