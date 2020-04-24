@@ -21,6 +21,9 @@ local background
 local scoreText
 local player 
 
+local function gameOver()
+    composer.gotoScene("manu")
+end
 
 local function createEnemy() 
     local newEnemy = display.newImageRect("burger.png", 40, 40);
@@ -81,6 +84,8 @@ local function gameLoop()
             table.remove( enemies, i )
         end
         scoreText.text = "GAMEOVER: "..score
+        gameOver()
+        return
     end
 end
 
