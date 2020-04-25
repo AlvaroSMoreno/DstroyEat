@@ -37,7 +37,19 @@ function scene:create( event )
 
     local playButton = display.newImageRect( sceneGroup, "play_btn.png", 90*2, 30*2 )
 	playButton.x = display.contentCenterX
-	playButton.y = display.contentHeight-50
+	playButton.y = display.contentHeight-210
+
+	local tienda = display.newImageRect( sceneGroup, "tienda_btn.png", 90*2, 30*2 )
+	tienda.x = display.contentCenterX
+	tienda.y = display.contentHeight-140
+
+	local scores = display.newImageRect( sceneGroup, "scores_btn.png", 90*2, 30*2 )
+	scores.x = display.contentCenterX
+	scores.y = display.contentHeight-70
+
+	local items = display.newImageRect( sceneGroup, "items_btn.png", 90*2, 30*2 )
+	items.x = display.contentCenterX
+	items.y = display.contentHeight
 
     playButton:addEventListener( "tap", gotoGame )
 
